@@ -1,8 +1,108 @@
+<!DOCTYPE html>
 <html>
+
 <head>
-<title>Hello</title>
+  <meta charset="utf-8">
+  <title>Sobremesasp</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="stylesheet" href="//ezoui.com/gk/lib/jquery.mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <!-- Export CSS  -->
+  <style>
+    p.test {
+    width: 15em; 
+    border: 0px solid #000000;
+    word-wrap: break-word;
+}
+  </style>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>
+    $(document).on("mobileinit", function () {
+      $.mobile.autoInitializePage = false;
+      $.mobile.hashListeningEnabled = false;
+    });
+
+    function mobileInitPage() {
+      $.mobile.hashListeningEnabled = true;
+      $.mobile.initializePage();
+    }
+  </script>
+  <script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <!-- Uncomment the following to include cordova in your app project -->
+  <!-- <script src="//ezoui.com/platforms/android_or_ios/cordova.js"></script> -->
+  <!-- GK Loader use RequireJS to load module -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.16/require.min.js"></script>
+  <!--Plug in GK-->
+  <script src="//ezoui.com/components/jquery.gk/jquery.gk.min.js"></script>
+  <!-- Load GK components -->
+  <script components="//ezoui.com/components/gk-ext/image.html" callback="mobileInitPage" src="//ezoui.com/components/gk-loader/gk-loader.min.js"></script>
 </head>
-<body>
-<h1>hello</h1>
+
+<body gk-app>
+  <!-- Page: home  -->
+  <div id="home" data-role="page" style="background-image: url(http://www.strongpositive.co.uk/sobre/img500x400/mouse1500x400.jpg); background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;">
+    <div role="main" class="ui-content">
+      <div data-role="navbar">
+        <ul>
+          <li>
+            <a class="ui-btn" href="#mousse" data-transition="flip">Sobremesas</a>
+          </li>
+          <li>
+            <a class="ui-btn" href="#form" data-transition="flip">Formulário</a>
+          </li>
+        </ul>
+      </div>
+      <div style="text-align:center;">
+        <img width="128" height="128" src="http://www.strongpositive.co.uk/sobre/logo.png">
+      </div>
+      <div style="text-align: center;">
+        <h3 style="color: white;">Suas festas de aniversário, almoços e jantares mais completas com Mousses, sabores: abacaxi,maracuja e limão e Pudins deliciosos. Encomendas pelos telefones: </h3>
+        <p style="color: white;">(85) 98846-0052 - (85) 3035-0052 e (85) 99616-6230 ou pela form</p>
+        <p class="test" style="color:red;font-size: 20px;">No momento só aceitamos encomendas para Fortaleza e Região Metropolitana de Fortaleza.</p>
+      </div>
+    </div>
+    <div data-role="footer" data-position="fixed">
+      <h3>Made By EG</h3>
+    </div>
+  </div>
+  <!-- Page: mousse  -->
+  <div id="mousse" data-role="page" style=" background-size: 95% 80%; background-position: 50% 50%; background-repeat: no-repeat;">
+    <div role="main" class="ui-content">
+      <div data-role="navbar">
+        <ul>
+          <li>
+            <a class="ui-btn" href="#home" data-transition="flip">Voltar Atras</a>
+          </li>
+          <li>
+            <a class="ui-btn" href="#form" data-transition="flip">Formulário</a>
+          </li>
+        </ul>
+      </div>
+      <br>
+      <div style="text-align:center;">
+        <img style="width:50%" src="http://www.strongpositive.co.uk/sobre/img500x400/mouse1500x400.jpg" is="image">
+        <br>
+        <img style="width:50%;" src="http://www.strongpositive.co.uk/sobre/img500x400/mousse3500x400.jpg" is="image">
+        <br>
+        <img style="width:50%;" src="http://www.strongpositive.co.uk/sobre/img500x400/mousse500x400.jpg" is="image">
+      </div>
+      <div data-role="footer" data-position="fixed">
+        <div style="text-align:center;"></div>
+      </div>
+    </div>
+  </div>
+  <!-- Page: form  -->
+  <div id="form" data-role="page">
+    <div role="main" class="ui-content">
+      <iframe src="https://docs.google.com/forms/d/1uMqLEZ8P3ZdXMN75Jp4UVGGpcyNHQup4sLODc3PmjJ8/viewform?embedded=true" width="400" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+      <div data-role="footer" data-position="fixed">
+        <div style="text-align: center;">
+          <a class="ui-btn" href="#home" data-transition="flip">Voltar Atras</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
+
 </html>
+
